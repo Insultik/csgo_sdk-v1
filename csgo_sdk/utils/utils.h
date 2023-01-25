@@ -10,6 +10,7 @@
 
 #define VFUNC(func, index, type, ...) __forceinline auto func { return utils::call_vfunc<type>(this, index)(this, __VA_ARGS__); };
 #define VFUNC_SIG(func, module_name, sig, type, ...) __forceinline auto func { static const auto fn = (type)utils::find_sig(module_name, sig); return fn(this, __VA_ARGS__); };
+#define round_to_int( value ) ( int ) (  0.5f + value ) 
 
 float ticks_to_time( int ticks );
 

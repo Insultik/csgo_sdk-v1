@@ -30,10 +30,10 @@ public:
 	[[nodiscard]] int     get_raw_color( ) const;
 	void set_alpha( int alpha );
 	__forceinline color_t override_alpha( int alpha, bool use_first = false ) {
-		return color_t( static_cast< int >( color_value[0] * 255.0f ),
-						static_cast< int >( color_value[1] * 255.0f ),
-						static_cast< int >( color_value[2] * 255.0f ),
-						static_cast< int >( use_first ? ( color_value[ 3 ] * alpha ) : alpha) )
+		return color_t( static_cast< int >( color_value[ 0 ] * 255.0f ),
+						static_cast< int >( color_value[ 1 ] * 255.0f ),
+						static_cast< int >( color_value[ 2 ] * 255.0f ),
+						static_cast< int >( use_first ? ( color_value[ 3 ] * alpha ) : alpha ) );
 	}
 	void    set_color( int _r, int _g, int _b, int _a = 0 );
 	void    set_color( float _r, float _g, float _b, float _a = 0 );

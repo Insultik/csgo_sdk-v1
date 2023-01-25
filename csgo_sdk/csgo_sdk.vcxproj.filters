@@ -148,6 +148,9 @@
     <ClCompile Include="cheat\features\visuals\players.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="cheat\features\visuals\bounding_box.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -465,10 +468,10 @@
     <ClInclude Include="sdk\interfaces\classes\i_surface.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="cheat\features\visuals\players.h">
+    <ClInclude Include="cheat\features\visuals\bounding_box.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="cheat\features\visuals\bounding_box.h">
+    <ClInclude Include="cheat\features\visuals\players.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

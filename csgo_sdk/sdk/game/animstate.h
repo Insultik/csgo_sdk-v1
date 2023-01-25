@@ -39,7 +39,7 @@ struct anim_layer_t {
 	int				m_invalidate_physics_bits;
 };
 
-class c_base_combat_weapon;
+class c_cs_weapon;
 
 class c_anim_state {
 public:
@@ -85,8 +85,8 @@ public:
 	int						m_tick_count;
 	char					pad2[ 84 ];
 	c_base_animating* m_base_entity;
-	c_base_combat_weapon* m_active_weapon;
-	c_base_combat_weapon* m_last_active_weapon;
+	c_cs_weapon* m_active_weapon;
+	c_cs_weapon* m_last_active_weapon;
 	float					m_last_cur_time;
 	int						m_last_frame_count;
 	float					m_delta_time;

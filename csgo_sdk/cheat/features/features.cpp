@@ -1,7 +1,7 @@
 #include "features.h"
 
 void features::draw_features( ) {
-
+	players::instance( );
 }
 
 void features::create_move( ) {

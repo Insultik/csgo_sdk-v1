@@ -6,8 +6,20 @@
 #include "weapon.h"
 #include "animstate.h"
 
-#define max_game_players 65
-#define max_sim_ticks 32
+namespace values {
+    inline constexpr auto max_game_players = 65;
+    inline constexpr auto max_sim_ticks = 32;
+    inline constexpr auto mp_backup = 150u;
+                          
+    inline constexpr auto max_bones = 256u;
+    inline constexpr auto max_layers = 13u;
+
+    inline auto max_pitch = 89.f;
+    inline constexpr auto max_roll = 50.f;
+    inline constexpr auto teleport_dist = 4096.f;
+}
+
+
 
 #define DATA_MAP( datamap, func, type, name) \
 	__forceinline type& func() { \

@@ -1,5 +1,40 @@
 #pragma once
 
+enum struct e_hitbox : int {
+	head,
+	neck,
+	pelvis,
+	stomach,
+	lower_chest,
+	chest,
+	upper_chest,
+	right_thigh,
+	left_thigh,
+	right_calf,
+	left_calf,
+	right_foot,
+	left_foot,
+	right_hand,
+	left_hand,
+	right_upper_arm,
+	right_forearm,
+	left_upper_arm,
+	left_forearm,
+	max
+};
+
+enum struct e_hitgroup : int {
+	generic,
+	head,
+	chest,
+	stomach,
+	left_arm,
+	right_arm,
+	left_leg,
+	right_leg,
+	gear = 10
+};
+
 enum e_bone_flags {
 	bone_flag_physically_simulated = ( 1 << 0 ),
 	bone_flag_physics_procedural = ( 1 << 1 ),

@@ -42,7 +42,7 @@ namespace console {
 		HANDLE hConsole = GetStdHandle( STD_OUTPUT_HANDLE );
 		SetConsoleTextAttribute( hConsole, 15 );
 		if constexpr ( sizeof...( arg_list ) > 0 )
-			std::cout << std::vformat( text.c_str( ), std::make_format_args( arg_list... ) ) << std::endl;
+			std::cout << text.c_str( ) << std::endl;
 		else
 			std::cout << text.c_str( ) << std::endl;
 		SetConsoleTextAttribute( hConsole, 15 );
@@ -53,7 +53,7 @@ namespace console {
 		HANDLE hConsole = GetStdHandle( STD_OUTPUT_HANDLE );
 		SetConsoleTextAttribute( hConsole, color );
 		if constexpr ( sizeof...( arg_list ) > 0 )
-			std::cout << std::vformat( text.c_str( ), std::make_format_args( arg_list... ) ) << std::endl;
+			std::cout << text.c_str( ) << std::endl;//std::vformat( text.c_str( ), std::make_format_args( arg_list... ) ) << std::endl;
 		else
 			std::cout << text.c_str( ) << std::endl;
 		SetConsoleTextAttribute( hConsole, 15 );

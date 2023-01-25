@@ -8,5 +8,5 @@ namespace lag_comp {
 	float lerp_time( );
 	bool valid_record( c_lag_record* record, bool force_dead = false );
 
-	inline std::deque< c_lag_record > m_player_records[ max_game_players + 1 ];
+	inline std::deque< c_lag_record > m_player_records[ values::max_game_players ];
 }

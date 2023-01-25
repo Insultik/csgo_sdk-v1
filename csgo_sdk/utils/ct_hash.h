@@ -10,7 +10,6 @@ constexpr auto hash( const char *str ) {
     unsigned out{ 0x811Cu };
     size_t len{ 0x1u };
 
-
     while ( str[ ++len ] != '\0' );
 
     for ( size_t i{}; i < len; ++i )

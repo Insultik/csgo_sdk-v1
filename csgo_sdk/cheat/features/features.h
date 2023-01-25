@@ -6,6 +6,8 @@
 #include "animations/lagcomp.h"
 #include "events/events.h"
 #include "listeners/listeners.h"
+#include "visuals/players.h"
+#include "visuals/bounding_box.h"
 
 namespace features {
 	void draw_features( );

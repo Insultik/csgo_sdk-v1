@@ -159,6 +159,7 @@
     <ClCompile Include="cheat\features\events\callbacks\player_hurt.cpp" />
     <ClCompile Include="cheat\features\features.cpp" />
     <ClCompile Include="cheat\features\misc\movement.cpp" />
+    <ClCompile Include="cheat\features\visuals\bounding_box.cpp" />
     <ClCompile Include="cheat\features\visuals\players.cpp" />
     <ClCompile Include="cheat\hooks\hooks.cpp" />
     <ClCompile Include="cheat\hooks\vtables\animstate.cpp" />
@@ -205,6 +206,7 @@
     <ClInclude Include="cheat\features\features.h" />
     <ClInclude Include="cheat\features\misc\movement.h" />
     <ClInclude Include="cheat\features\visuals\bounding_box.h" />
+    <ClInclude Include="cheat\features\visuals\players.h" />
     <ClInclude Include="cheat\hooks\hooks.h" />
     <ClInclude Include="cheat\features\animations\local_animations.h" />
     <ClInclude Include="cheat\features\animations\lagcomp.h" />
@@ -252,7 +254,6 @@
     <ClInclude Include="cheat\features\events\events.h" />
     <ClInclude Include="cheat\features\listeners\listeners.h" />
     <ClInclude Include="menu\menu.h" />
-    <ClInclude Include="cheat\features\visuals\players.h" />
     <ClInclude Include="sdk\interfaces\classes\i_debug_overlay.h" />
     <ClInclude Include="sdk\interfaces\classes\i_event_listener.h" />
     <ClInclude Include="sdk\interfaces\classes\i_game_movement.h" />

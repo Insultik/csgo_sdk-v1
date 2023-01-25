@@ -103,7 +103,7 @@ public:
         if ( !this->valid( ) )
             return 0;
 
-        if ( !this->alive( ) && m_local->get_observer_target( ).is_valid( ) && ( m_local->get_observer_mode( ) == obs_mode_fixed || m_local->get_observer_mode( ) == obs_mode_in_eye || m_local->get_observer_mode( ) == obs_mode_chase ) )
+        if ( !this->alive( ) && m_local->get_observer_target( ).is_valid( ) )
             return m_local->get_observer_target( ).get( )->get_team( );
 
         return m_local->get_team( );
