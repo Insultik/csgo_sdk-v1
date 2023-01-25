@@ -1,0 +1,51 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+*.vsidx
+*.lock
+.vs/csgo_sdk/v17/.suo
+*.db
+*.db-shm
+*.db-wal
+*.opendb
+*.bin
+*.ipch
+*.log
+*.recipe
+*.ilk
+*.pdb
+*.tlog
+*.ifc
+*.json
+*.idb
+*.command
+*.sln
