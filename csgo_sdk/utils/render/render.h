@@ -18,21 +18,22 @@ enum font_flags : int {
 	font_centered = font_centered_x | font_centered_y
 };
 
-namespace render {
-	namespace fonts {
-		enum e_fonts {
-			verdana_11 = 0,
-			verdana_14,
-			verdana_18,
-			pixel_11,
-			pixel_14,
-			pixel_18,
-			weapon_11,
-			weapon_14,
-			weapon_18
-		};
-	}
+namespace fonts {
+	enum e_fonts {
+		verdana_11 = 0,
+		verdana_14,
+		verdana_18,
+		pixel_11,
+		pixel_14,
+		pixel_18,
+		weapon_11,
+		weapon_14,
+		weapon_18
+	};
+}
 
+namespace render {
+	
 	inline std::mutex m_render_mutex {};
 
 	static ImU32 get_u32( color_t color ) {

@@ -77,7 +77,7 @@ void c_bounding_box::bar( float max, float value, color_t color, e_position rend
 
 		render::rect_filled( vec2_t( x + pos.x, y + pos.y ), vec2_t( size.x * bar_fill, size.y ), color.override_alpha( ( uint8_t ) ( 255.f * m_alpha ) ) );
 		if ( show_text && ( int ) value < ( int ) max )
-			render::text( std::to_string( ( int ) value ), vec2_t( x + pos.x + size.x * bar_fill, y + pos.y ), color_t( 255, 255, 255, ( uint8_t ) ( 255.f * m_alpha ) ), render::fonts::verdana_11, font_outline );
+			render::text( std::to_string( ( int ) value ), vec2_t( x + pos.x + size.x * bar_fill, y + pos.y ), color_t( 255, 255, 255, ( uint8_t ) ( 255.f * m_alpha ) ), fonts::verdana_11, font_outline );
 	}
 	else {
 		render::rect_filled( vec2_t( x + pos.x - 1, y + pos.y ), vec2_t( size.x + 2, size.y ), color_t( 35, 35, 35, ( uint8_t ) ( 255.f * m_alpha ) ) );
@@ -88,13 +88,13 @@ void c_bounding_box::bar( float max, float value, color_t color, e_position rend
 		render::rect_filled( vec2_t( x + pos.x, y + pos.y + size.y * ( 1.f - bar_fill ) ), vec2_t( size.x, size.y * bar_fill ), color.override_alpha( ( uint8_t ) ( 255.f * m_alpha ) ), 0.f );
 
 		if ( show_text && ( int ) value < ( int ) max )
-			render::text( std::to_string( ( int ) value ), vec2_t( x + pos.x, y + pos.y + size.y * ( 1.f - bar_fill ) ), color_t( 255, 255, 255, ( uint8_t ) ( 255.f * m_alpha ) ), render::fonts::verdana_11, font_outline | font_centered );
+			render::text( std::to_string( ( int ) value ), vec2_t( x + pos.x, y + pos.y + size.y * ( 1.f - bar_fill ) ), color_t( 255, 255, 255, ( uint8_t ) ( 255.f * m_alpha ) ), fonts::verdana_11, font_outline | font_centered );
 	}
 
 	current_offset += m_bar_size + 1 /* outline */ + m_padding;
 }
 
-void c_bounding_box::text( std::string text, color_t clr, e_position _pos, render::fonts::e_fonts font  ) {
+void c_bounding_box::text( std::string text, color_t clr, e_position _pos, fonts::e_fonts font  ) {
 	vec2_t pos {};
 	auto size = render::calc_text_size( text.c_str( ), font );
 	auto& current_offset = m_render_state.m_offsets[ _pos ];
@@ -133,7 +133,7 @@ void c_bounding_box::text( std::string text, color_t clr, e_position _pos, rende
 		render::text( text, vec2_t( pos.x, pos.y ), clr.override_alpha( m_alpha * 255 ), font, adjust_flag | font_outline );
 }
 
-void c_bounding_box::text_array( text_array_t&& text_array, e_position _pos, render::fonts::e_fonts font ) {
+void c_bounding_box::text_array( text_array_t&& text_array, e_position _pos, fonts::e_fonts font ) {
 	if ( text_array.empty( ) )
 		return;
 

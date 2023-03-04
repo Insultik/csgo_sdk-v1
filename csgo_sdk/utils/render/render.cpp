@@ -19,9 +19,9 @@ void render::instance( ) {
 	ImGui::GetIO( ).Fonts->AddFontFromFileTTF( "c:\\Windows\\Fonts\\verdana.ttf", 14.0f, &cfg, ranges );
 	ImGui::GetIO( ).Fonts->AddFontFromFileTTF( "c:\\Windows\\Fonts\\verdana.ttf", 18.0f, &cfg, ranges );
 
-	ImGui::GetIO( ).Fonts->AddFontFromMemoryTTF( ( void* ) PixelFont, sizeof( PixelFont ), 11.0f, &cfg, ranges );
-	ImGui::GetIO( ).Fonts->AddFontFromMemoryTTF( ( void* ) PixelFont, sizeof( PixelFont ), 14.0f, &cfg, ranges );
-	ImGui::GetIO( ).Fonts->AddFontFromMemoryTTF( ( void* ) PixelFont, sizeof( PixelFont ), 18.0f, &cfg, ranges );
+	ImGui::GetIO( ).Fonts->AddFontFromMemoryTTF( ( void* ) PixelFont, sizeof( PixelFont ), 8.0f, &cfg, ranges );
+	ImGui::GetIO( ).Fonts->AddFontFromMemoryTTF( ( void* ) PixelFont, sizeof( PixelFont ), 12.0f, &cfg, ranges );
+	ImGui::GetIO( ).Fonts->AddFontFromMemoryTTF( ( void* ) PixelFont, sizeof( PixelFont ), 16.0f, &cfg, ranges );
 	
 	ImGui::GetIO( ).Fonts->AddFontFromMemoryCompressedBase85TTF( WeaponIcons_compressed_data_base85, 11.0f, &cfg, ranges );
 	ImGui::GetIO( ).Fonts->AddFontFromMemoryCompressedBase85TTF( WeaponIcons_compressed_data_base85, 14.0f, &cfg, ranges );
@@ -128,7 +128,7 @@ void render::triangle( const vec2_t first, const vec2_t second, const vec2_t thi
 }
 
 void render::text( std::string text, vec2_t text_position, color_t color, fonts::e_fonts font_, int flags, bool menu ) {
-	ImFont* font = ImGui::GetIO( ).Fonts->Fonts[ font_ ];
+	ImFont* font = ImGui::GetIO( ).Fonts->Fonts[ static_cast< int >( font_ ) ];
 	if ( !font || !font->ContainerAtlas )
 		return;
 

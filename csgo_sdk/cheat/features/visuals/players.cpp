@@ -7,6 +7,7 @@ void players::instance( ) {
 			data.invalidate( );
 			continue;
 		}
+
 		float max_alpha_amount = 1.f;
 		if ( player.m_entity->is_immune( ) ) max_alpha_amount = 0.52f;
 		else if ( player.m_entity->is_dormant( ) ) max_alpha_amount = 0.64f;
@@ -22,6 +23,6 @@ void players::instance( ) {
 
 		data.m_box->box( color_t::white( ) );
 		data.m_box->bar( 100, round_to_int( data.m_health ), color_t::green( ), c_bounding_box::pos_left );
-		data.m_box->text( "Username", color_t::white( ), c_bounding_box::pos_top, render::fonts::verdana_14 );
+		data.m_box->text( "Username", color_t::white( ), c_bounding_box::pos_top, fonts::verdana_14 );
 	}
 }
