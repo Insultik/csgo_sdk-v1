@@ -17,11 +17,11 @@ void players::instance( ) {
 		if ( auto weapon = player.m_entity->get_active_weapon(); weapon != nullptr )
 			data.m_ammo = std::lerp( data.m_ammo, weapon->get_ammo( ), interfaces::global_vars->m_frame_time * 8.f );
 
-		if ( data.m_box.m_alpha = data.m_alpha; !data.m_alpha || !data.m_box.calc_box( player.m_entity ) )
+		if ( data.m_box->m_alpha = data.m_alpha; !data.m_alpha || !data.m_box->calc_box( player.m_entity ) )
 			continue;
 
-		data.m_box.box( color_t::white( ) );
-		data.m_box.bar( 100.f, round_to_int( data.m_health ), color_t::green( ), c_bounding_box::pos_left );
-		data.m_box.text( "Username", color_t::white( ), c_bounding_box::pos_top, render::fonts::verdana_14 );
+		data.m_box->box( color_t::white( ) );
+		data.m_box->bar( 100, round_to_int( data.m_health ), color_t::green( ), c_bounding_box::pos_left );
+		data.m_box->text( "Username", color_t::white( ), c_bounding_box::pos_top, render::fonts::verdana_14 );
 	}
 }

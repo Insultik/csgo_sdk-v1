@@ -17,26 +17,26 @@ int color_t::get_raw_color( ) const {
 }
 
 void color_t::set_alpha( const int alpha ) {
-	color_value[3] = alpha;
+	color_value.at( 3 ) = alpha;
 }
 
 void color_t::set_color( const int _r, const int _g, const int _b, const int _a ) {
-	color_value[0] = static_cast<unsigned char>(_r);
-	color_value[1] = static_cast<unsigned char>(_g);
-	color_value[2] = static_cast<unsigned char>(_b);
-	color_value[3] = static_cast<unsigned char>(_a);
+	color_value.at( 0 ) = static_cast<unsigned char>(_r);
+	color_value.at( 1 ) = static_cast<unsigned char>(_g);
+	color_value.at( 2 ) = static_cast<unsigned char>(_b);
+	color_value.at( 3 ) = static_cast<unsigned char>(_a);
 }
 void color_t::set_color( float _r, float _g, float _b, float _a ) {
-	color_value[0] = static_cast<unsigned char>(_r * 255.0f);
-	color_value[1] = static_cast<unsigned char>(_g * 255.0f);
-	color_value[2] = static_cast<unsigned char>(_b * 255.0f);
-	color_value[3] = static_cast<unsigned char>(_a * 255.0f);
+	color_value.at( 0 ) = static_cast<unsigned char>(_r * 255.0f);
+	color_value.at( 1 ) = static_cast<unsigned char>(_g * 255.0f);
+	color_value.at( 2 ) = static_cast<unsigned char>(_b * 255.0f);
+	color_value.at( 3 ) = static_cast<unsigned char>(_a * 255.0f);
 }
 void color_t::get_color( int& r, int& g, int& b, int& a ) const {
-	r = color_value[0];
-	g = color_value[1];
-	b = color_value[2];
-	a = color_value[3];
+	r = color_value.at( 0 );
+	g = color_value.at( 1 );
+	b = color_value.at( 2 );
+	a = color_value.at( 3 );
 }
 bool color_t::operator== ( const color_t& rhs ) const {
 	return *(int*) this == *(int*) &rhs;

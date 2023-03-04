@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <string>
+#include <array>
 
 class color_t {
 public:
@@ -20,10 +21,10 @@ public:
 	explicit color_t( float* rgb ) : color_t( rgb[0], rgb[1], rgb[2], rgb[3] ) {
 	}
 	explicit color_t( unsigned long argb ) {
-		color_value[2] = static_cast<unsigned char>((argb & 0x000000FF) >> (0 * 8));
-		color_value[1] = static_cast<unsigned char>((argb & 0x0000FF00) >> (1 * 8));
-		color_value[0] = static_cast<unsigned char>((argb & 0x00FF0000) >> (2 * 8));
-		color_value[3] = static_cast<unsigned char>((argb & 0xFF000000) >> (3 * 8));
+		color_value.at( 2 ) = static_cast<unsigned char>( ( argb & 0x000000FF ) >> ( 0 * 8 ) );
+		color_value.at( 1 ) = static_cast<unsigned char>((argb & 0x0000FF00) >> (1 * 8));
+		color_value.at( 0 ) = static_cast<unsigned char>((argb & 0x00FF0000) >> (2 * 8));
+		color_value.at( 3 ) = static_cast<unsigned char>((argb & 0xFF000000) >> (3 * 8));
 	}
 
 	void    set_raw_color( int color32 );
@@ -42,23 +43,23 @@ public:
 	std::string get_normalnij_hex_color( ) const;
 
 	int r( ) const {
-		return color_value[0];
+		return color_value.at( 0 );
 	}
 	int g( ) const {
-		return color_value[1];
+		return color_value.at( 1 );
 	}
 	int b( ) const {
-		return color_value[2];
+		return color_value.at( 2 );
 	}
 	int a( ) const {
-		return color_value[3];
+		return color_value.at( 3 );
 	}
 
 	unsigned char& operator[]( const int index ) {
-		return color_value[index];
+		return color_value.at( index );
 	}
 	const unsigned char& operator[]( const int index ) const {
-		return color_value[index];
+		return color_value.at( index );
 	}
 
 	bool operator==( const color_t& rhs ) const;
