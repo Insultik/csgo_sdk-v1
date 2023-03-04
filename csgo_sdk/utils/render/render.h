@@ -19,13 +19,27 @@ enum font_flags : int {
 };
 
 namespace render {
+	namespace fonts {
+		enum e_fonts {
+			verdana_11 = 0,
+			verdana_14,
+			verdana_18,
+			pixel_11,
+			pixel_14,
+			pixel_18,
+			weapon_11,
+			weapon_14,
+			weapon_18
+		};
+	}
+
 	inline std::mutex m_render_mutex {};
 
 	static ImU32 get_u32( color_t color ) {
 		return ImColor( color.r( ) / 255.f, color.g( ) / 255.f, color.b( ) / 255.f, color.a( ) / 255.f );
 	}
 
-	__forceinline vec2_t calc_text_size( std::string txt, fonts_e font_ = verdana_11 ) {
+	__forceinline vec2_t calc_text_size( std::string txt, fonts::e_fonts font_ = fonts::verdana_11 ) {
 		ImFont* font = ImGui::GetIO( ).Fonts->Fonts[ font_ ];
 		if ( !font || !font->ContainerAtlas || txt.empty( ) || !font->IsLoaded( ) )
 			return vec2_t( );
@@ -43,7 +57,7 @@ namespace render {
 	void circle_3d_filled( const vec3_t& origin, float radius, color_t color );
 	void line( vec2_t start, vec2_t end, color_t color, float thickness );
 	void triangle( vec2_t first, vec2_t second, vec2_t third, color_t color );
-	void text( std::string text, vec2_t text_position, color_t color, fonts_e font = verdana_11, int flags = font_none, bool menu = false );
+	void text( std::string text, vec2_t text_position, color_t color, fonts::e_fonts font = fonts::verdana_11, int flags = font_none, bool menu = false );
 	void instance( );
 	void reset( );
 	void draw( );

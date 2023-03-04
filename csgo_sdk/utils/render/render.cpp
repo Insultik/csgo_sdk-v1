@@ -127,7 +127,7 @@ void render::triangle( const vec2_t first, const vec2_t second, const vec2_t thi
 	m_draw_list->AddTriangleFilled( ImVec2( first.x, first.y ), ImVec2( second.x, second.y ), ImVec2( third.x, third.y ), get_u32( color ) );
 }
 
-void render::text( std::string text, vec2_t text_position, color_t color, fonts_e font_, int flags, bool menu ) {
+void render::text( std::string text, vec2_t text_position, color_t color, fonts::e_fonts font_, int flags, bool menu ) {
 	ImFont* font = ImGui::GetIO( ).Fonts->Fonts[ font_ ];
 	if ( !font || !font->ContainerAtlas )
 		return;

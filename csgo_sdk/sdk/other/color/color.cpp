@@ -1,11 +1,5 @@
 #include "color.h"
 
-color_t color_t::black( 0, 0, 0, 255 );
-color_t color_t::white( 255, 255, 255, 255 );
-color_t color_t::red( 255, 0, 0, 255 );
-color_t color_t::green( 0, 128, 0, 255 );
-color_t color_t::blue( 0, 0, 255, 255 );
-
 color_t::color_t( ) {
 	*reinterpret_cast<int*>(this) = 0;
 }

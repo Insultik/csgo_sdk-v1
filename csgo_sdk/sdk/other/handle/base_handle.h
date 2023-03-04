@@ -19,12 +19,12 @@ public:
 
 	// Even if this returns true, Get() still can return return a non-null value.
 	// This just tells if the handle has been initted with any values.
-	[[nodiscard]] bool is_valid( ) const;
+	bool is_valid( ) const;
 
-	[[nodiscard]] int get_entry_index( ) const;
-	[[nodiscard]] int get_serial_number( ) const;
+	int get_entry_index( ) const;
+	int get_serial_number( ) const;
 
-	[[nodiscard]] int to_int( ) const;
+	int to_int( ) const;
 	bool operator !=( const c_base_handle& other ) const;
 	bool operator ==( const c_base_handle& other ) const;
 	bool operator ==( const i_handle_entity* ent ) const;
@@ -35,7 +35,7 @@ public:
 	const c_base_handle& operator=( const i_handle_entity* entity );
 	const c_base_handle& set( const i_handle_entity* entity );
 
-	[[nodiscard]] i_handle_entity* get( ) const;
+	i_handle_entity* get( ) const;
 protected:
 	unsigned long  m_index;
 };

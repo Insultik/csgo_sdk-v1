@@ -57,7 +57,7 @@ namespace utils {
 
 	uint8_t* find_sig( const std::string& module_array, const std::string& byte_array );
 	template <typename T>
-	[[nodiscard]] static __forceinline T call_vfunc( void* instance, std::size_t index ) {
+	static __forceinline T call_vfunc( void* instance, std::size_t index ) {
 		return ( *static_cast< T** >( instance ) )[ index ];
 	}
 }

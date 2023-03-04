@@ -12,7 +12,10 @@ public:
 		m_alpha = { };
 	}
 
-	float x, y, w, h;
+	float x,
+		  y,
+		  w,
+		  h;
 	float m_alpha;
 
 	enum e_position : int {
@@ -43,9 +46,9 @@ public:
 
 	void bar( float max, float value, color_t color, e_position render_pos = pos_left, bool show_text = true );
 
-	void text( std::string text, color_t clr, e_position _pos = pos_right, render::fonts::fonts_e font = render::fonts::verdana_11 );
+	void text( std::string text, color_t clr, e_position _pos = pos_right, render::fonts::e_fonts font = render::fonts::verdana_11 );
 
-	void text_array( text_array_t&& text_array, e_position _pos = pos_right, render::fonts::fonts_e font = render::fonts::pixel_11 );
+	void text_array( text_array_t&& text_array, e_position _pos = pos_right, render::fonts::e_fonts font = render::fonts::pixel_11 );
 
 	__forceinline void reset_positions( ) {
 		for ( auto& o : m_render_state.m_offsets )

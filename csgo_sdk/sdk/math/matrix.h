@@ -123,20 +123,20 @@ public:
 		matrix_set_column( position, 3 );
 	}
 
-	[[nodiscard]] vec3_t get_x_axis( ) const {
+	vec3_t get_x_axis( ) const {
 		return at( 0 );
 	}
-	[[nodiscard]] vec3_t get_y_axis( ) const {
+	vec3_t get_y_axis( ) const {
 		return at( 1 );
 	}
-	[[nodiscard]] vec3_t get_z_axis( ) const {
+	vec3_t get_z_axis( ) const {
 		return at( 2 );
 	}
-	[[nodiscard]] vec3_t get_origin( ) const {
+	vec3_t get_origin( ) const {
 		return at( 3 );
 	}
 
-	[[nodiscard]] vec3_t at( const int i ) const {
+	vec3_t at( const int i ) const {
 		return vec3_t{ m_mat_val[0][i], m_mat_val[1][i], m_mat_val[2][i] };
 	}
 
@@ -149,7 +149,7 @@ public:
 	float* base( ) {
 		return &m_mat_val[0][0];
 	}
-	[[nodiscard]] const float* base( ) const {
+	const float* base( ) const {
 		return &m_mat_val[0][0];
 	}
 
@@ -199,7 +199,7 @@ public:
 		return &m[0][0];
 	}
 
-	[[nodiscard]] const float* base( ) const {
+	const float* base( ) const {
 		return &m[0][0];
 	}
 
@@ -218,7 +218,7 @@ public:
 	void post_translate( const vec3_t& trans );
 
 	matrix_t& as3x4( );
-	[[nodiscard]] const matrix_t& as3x4( ) const;
+	const matrix_t& as3x4( ) const;
 	void copy_from3x4( const matrix_t& m3x4 );
 	void set3x4( matrix_t& matrix3x4 ) const;
 
@@ -228,10 +228,10 @@ public:
 	}
 
 	// Access the basis vectors.
-	[[nodiscard]] vec3_t get_left( ) const;
-	[[nodiscard]] vec3_t get_up( ) const;
-	[[nodiscard]] vec3_t get_forward( ) const;
-	[[nodiscard]] vec3_t get_translation( ) const;
+	vec3_t get_left( ) const;
+	vec3_t get_up( ) const;
+	vec3_t get_forward( ) const;
+	vec3_t get_translation( ) const;
 
 	// Multiply by a 3D Vector (same as operator*).
 	void v3_mul( const vec3_t& in, vec3_t& out ) const;
@@ -240,22 +240,22 @@ public:
 	//void  V4Mul( const c_vec4 &in, c_vec4 &out ) const;
 
 	// Applies the rotation (ignores translation in the matrix). (This just calls VMul3x3).
-	[[nodiscard]] vec3_t apply_rotation( const vec3_t& vec ) const;
+	vec3_t apply_rotation( const vec3_t& vec ) const;
 
 	// Multiply by a Vector (divides by w, assumes input w is 1).
 	vec3_t operator*( const vec3_t& vec ) const;
 
 	// Multiply by the upper 3x3 part of the matrix (ie: only apply rotation).
-	[[nodiscard]] vec3_t v_mul3x3( const vec3_t& vec ) const;
+	vec3_t v_mul3x3( const vec3_t& vec ) const;
 
 	// Apply the inverse (transposed) rotation (only works on pure rotation matrix)
-	[[nodiscard]] vec3_t v_mul3x3transpose( const vec3_t& vec ) const;
+	vec3_t v_mul3x3transpose( const vec3_t& vec ) const;
 
 	// Multiply by the upper 3 rows.
-	[[nodiscard]] vec3_t v_mul4x3( const vec3_t& vec ) const;
+	vec3_t v_mul4x3( const vec3_t& vec ) const;
 
 	// Apply the inverse (transposed) transformation (only works on pure rotation/translation)
-	[[nodiscard]] vec3_t v_mul4x3_transpose( const vec3_t& vec ) const;
+	vec3_t v_mul4x3_transpose( const vec3_t& vec ) const;
 
 
 	// matrix->plane operations.
@@ -287,7 +287,7 @@ public:
 
 	// Set to identity.
 	void identity( );
-	[[nodiscard]] bool is_identity( ) const;
+	bool is_identity( ) const;
 
 	// The matrix.
 	float m[4][4];

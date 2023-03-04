@@ -5,13 +5,13 @@
 namespace players {
 	class player_esp_data_t {
 	public:
-		c_bounding_box m_box;
+		c_bounding_box* m_box;
 		float m_alpha { };
 		float m_ammo { };
 		float m_health { };
 
 		__forceinline void invalidate( ) {
-			m_box = { };
+			m_box = new c_bounding_box( );
 			m_alpha = m_ammo = m_health = 0.f;
 		}
 	};

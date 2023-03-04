@@ -27,7 +27,7 @@ public:
 	}
 
 	void    set_raw_color( int color32 );
-	[[nodiscard]] int     get_raw_color( ) const;
+	int     get_raw_color( ) const;
 	void set_alpha( int alpha );
 	__forceinline color_t override_alpha( int alpha, bool use_first = false ) {
 		return color_t( static_cast< int >( color_value[ 0 ] * 255.0f ),
@@ -39,18 +39,18 @@ public:
 	void    set_color( float _r, float _g, float _b, float _a = 0 );
 	void    get_color( int& r, int& g, int& b, int& a ) const;
 
-	[[nodiscard]] std::string get_normalnij_hex_color( ) const;
+	std::string get_normalnij_hex_color( ) const;
 
-	[[nodiscard]] int r( ) const {
+	int r( ) const {
 		return color_value[0];
 	}
-	[[nodiscard]] int g( ) const {
+	int g( ) const {
 		return color_value[1];
 	}
-	[[nodiscard]] int b( ) const {
+	int b( ) const {
 		return color_value[2];
 	}
-	[[nodiscard]] int a( ) const {
+	int a( ) const {
 		return color_value[3];
 	}
 
@@ -114,11 +114,11 @@ public:
 		};
 	}
 
-	static color_t black;
-	static color_t white;
-	static color_t red;
-	static color_t green;
-	static color_t blue;
+	static color_t black( int alpha = 255 ) { return color_t( 0, 0, 0, alpha ) };
+	static color_t white( int alpha = 255 ) { return color_t( 255, 255, 255, alpha ) };
+	static color_t red( int alpha = 255 ) { return color_t( 255, 0, 0, alpha ) };
+	static color_t green( int alpha = 255 ) { return color_t( 0, 255, 0, alpha ) };
+	static color_t blue( int alpha = 255 ) { return color_t( 0, 0, 255, alpha ) };
 
 private:
 	uint8_t color_value[4]{};

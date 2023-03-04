@@ -53,9 +53,9 @@ struct recv_prop_t {
 	int m_elements{};
 	const char* m_parent_array_prop_name{};
 
-	[[nodiscard]] recv_var_proxy_fn get_proxy_fn( ) const;
+	recv_var_proxy_fn get_proxy_fn( ) const;
 	void set_proxy_fn( recv_var_proxy_fn fn );
-	[[nodiscard]] data_table_recv_var_proxy_fn get_data_table_proxy_fn( ) const;
+	data_table_recv_var_proxy_fn get_data_table_proxy_fn( ) const;
 	void set_data_table_proxy_fn( data_table_recv_var_proxy_fn fn );
 };
 

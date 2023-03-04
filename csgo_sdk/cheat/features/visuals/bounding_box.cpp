@@ -94,7 +94,7 @@ void c_bounding_box::bar( float max, float value, color_t color, e_position rend
 	current_offset += m_bar_size + 1 /* outline */ + m_padding;
 }
 
-void c_bounding_box::text( std::string text, color_t clr, e_position _pos, render::fonts::fonts_e font  ) {
+void c_bounding_box::text( std::string text, color_t clr, e_position _pos, render::fonts::e_fonts font  ) {
 	vec2_t pos {};
 	auto size = render::calc_text_size( text.c_str( ), font );
 	auto& current_offset = m_render_state.m_offsets[ _pos ];
@@ -103,19 +103,19 @@ void c_bounding_box::text( std::string text, color_t clr, e_position _pos, rende
 
 	switch ( _pos ) {
 		case e_position::pos_bottom:
-			pos = { 0.f, h + current_offset };
+			pos = vec2_t( 0.f, h + current_offset );
 			current_offset += size.y;
 			break;
 		case e_position::pos_top:
-			pos = { 0.f, -current_offset - size.y };
+			pos = vec2_t( 0.f, -current_offset - size.y );
 			current_offset += size.y;
 			break;
 		case e_position::pos_left:
-			pos = { -size.x - m_padding, current_offset };
+			pos = vec2_t( -size.x - m_padding, current_offset );
 			current_offset += size.y;
 			break;
 		case e_position::pos_right:
-			pos = { w + size.x + m_padding, current_offset };
+			pos = vec2_t( w + size.x + m_padding, current_offset );
 			current_offset += size.y;
 			break;
 		default:
@@ -133,7 +133,7 @@ void c_bounding_box::text( std::string text, color_t clr, e_position _pos, rende
 		render::text( text, vec2_t( pos.x, pos.y ), clr.override_alpha( m_alpha * 255 ), font, adjust_flag | font_outline );
 }
 
-void c_bounding_box::text_array( text_array_t&& text_array, e_position _pos, render::fonts::fonts_e font ) {
+void c_bounding_box::text_array( text_array_t&& text_array, e_position _pos, render::fonts::e_fonts font ) {
 	if ( text_array.empty( ) )
 		return;
 
