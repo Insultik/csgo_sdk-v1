@@ -20,8 +20,8 @@ void players::instance( ) {
 		if ( data.m_box.m_alpha = data.m_alpha; !data.m_alpha || !data.m_box.calc_box( player.m_entity ) )
 			continue;
 
-		data.m_box.box( color_t::white );
-		data.m_box.bar( 100.f, round_to_int( data.m_health ), color_t::green, c_bounding_box::pos_left );
-		data.m_box.text( "Username", color_t::white, c_bounding_box::pos_top, render::fonts::verdana_14 );
+		data.m_box.box( color_t::white( ) );
+		data.m_box.bar( 100.f, round_to_int( data.m_health ), color_t::green( ), c_bounding_box::pos_left );
+		data.m_box.text( "Username", color_t::white( ), c_bounding_box::pos_top, render::fonts::verdana_14 );
 	}
 }

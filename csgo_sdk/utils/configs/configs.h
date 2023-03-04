@@ -9,7 +9,7 @@
 
 #include "../ct_hash.h"
 
-#define ADD_VAR( type, name, value ) Var<type> name = g_configs.add<type>(#name, value)
+#define ADD_VAR( type, name, value ) c_var<type> name = g_configs.add< type >(#name, value)
 
 #define BINDS HASH( "class std::vector<class KeyBind,class std::allocator<class KeyBind> >" )
 
@@ -187,7 +187,7 @@ enum KeyMode {
     TOGGLE
 };
 
-class Item {
+class c_item {
 public:
     template <typename _Ty>
     _Ty &get( ) { return *reinterpret_cast< _Ty * >( std::any_cast< _Ty >( &m_any ) ); }
@@ -198,20 +198,20 @@ public:
 };
 
 template <typename _Ty>
-class Var {
+class c_var {
 public:
     operator _Ty ( ) const { return m_item->get<_Ty>( ); }
     __forceinline _Ty &get( ) { return m_item->get<_Ty>( ); }
 
-    Item *m_item;
+    c_item*m_item;
 };
 
-class KeyBind {
+class c_key_bind {
 public:
-    __forceinline KeyBind( ) = default;
+    __forceinline c_key_bind( ) = default;
 
     template <typename _Ty>
-    __forceinline KeyBind( Item *item, std::string name, bool show_in_binds, int key_id, int mode, _Ty set, std::string combo_value = "None" ) : m_name{ name }, m_show_in_binds{ show_in_binds }, m_key_id{ key_id }, m_mode{ mode }, m_item_id{ item->m_id } {
+    __forceinline c_key_bind( c_item*item, std::string name, bool show_in_binds, int key_id, int mode, _Ty set, std::string combo_value = "None" ) : m_name{ name }, m_show_in_binds{ show_in_binds }, m_key_id{ key_id }, m_mode{ mode }, m_item_id{ item->m_id } {
         m_any   = std::make_any<_Ty>( set );
         m_type  = hash( typeid( set ).name( ) );
         m_combo_value = combo_value;
@@ -265,13 +265,13 @@ struct KeyPopup_t {
     float m_alpha = 0.f;
 };
 
-using Binds_t = std::vector< KeyBind >;
+using binds_t = std::vector< c_key_bind >;
 
-class Configs {
+class c_configs {
 public:
-    std::unordered_map< uint32_t, Item >                    m_items;
-    std::unordered_map< uint32_t, std::vector< KeyBind > >  m_key_binds;
-    std::unordered_map< uint32_t, KeyPopup_t >              m_popups;
+    std::unordered_map< uint32_t, c_item >                      m_items;
+    std::unordered_map< uint32_t, std::vector< c_key_bind > >   m_key_binds;
+    std::unordered_map< uint32_t, KeyPopup_t >                  m_popups;
 
 public:
     void save( const char *txt );
@@ -279,8 +279,26 @@ public:
 
     void think( );
 
-    Binds_t get_active_binds( ) {
-        Binds_t binds;
+    bool instance( );
+
+    void setup_var( c_var< bool > var, std::string item_name, bool value ) {
+        var = this->add< bool >( item_name, value );
+    }
+
+    void setup_var( c_var< float > var, std::string item_name, float value ) {
+        var = this->add< float >( item_name, value );
+    }
+
+    void setup_var( c_var< int > var, std::string item_name, int value ) {
+        var = this->add< int >( item_name, value );
+    }
+
+    void setup_var( c_var< bool* > var, std::string item_name, bool* value ) {
+        var = this->add< bool* >( item_name, value );
+    }
+
+    binds_t get_active_binds( ) {
+        binds_t binds;
 
         for ( auto &&[item_id, key_binds] : m_key_binds ) {
             for ( auto &key : key_binds ) {
@@ -293,10 +311,10 @@ public:
     }
 
     template <typename _Ty>
-    Var<_Ty> add( std::string item_name, _Ty value ) {
+    c_var<_Ty> add( std::string item_name, _Ty value ) {
         uint32_t item_id = HASH( ( std::to_string( m_items.size( ) ) + item_name ).c_str( ) );
-        Var<_Ty>  var;
-        Item      *item;
+        c_var<_Ty>  var;
+        c_item      *item;
 
         if ( m_key_binds.find( item_id ) == m_key_binds.end( ) ) {
             m_key_binds[ item_id ] = { };
@@ -322,5 +340,5 @@ public:
 
     } m_misc;
 
-    ADD_VAR( Binds_t, binds, Binds_t{ } );
+    ADD_VAR( binds_t, binds, binds_t{ } );
 } inline g_settings;

@@ -114,12 +114,11 @@ public:
 		};
 	}
 
-	static color_t black( int alpha = 255 ) { return color_t( 0, 0, 0, alpha ) };
-	static color_t white( int alpha = 255 ) { return color_t( 255, 255, 255, alpha ) };
-	static color_t red( int alpha = 255 ) { return color_t( 255, 0, 0, alpha ) };
-	static color_t green( int alpha = 255 ) { return color_t( 0, 255, 0, alpha ) };
-	static color_t blue( int alpha = 255 ) { return color_t( 0, 0, 255, alpha ) };
+	static color_t black( int alpha = 255 ) { return color_t( 0, 0, 0, alpha ); };
+	static color_t white( int alpha = 255 ) { return color_t( 255, 255, 255, alpha ); };
+	static color_t red( int alpha = 255 ) { return color_t( 255, 0, 0, alpha ); };
+	static color_t green( int alpha = 255 ) { return color_t( 0, 255, 0, alpha ); };
+	static color_t blue( int alpha = 255 ) { return color_t( 0, 0, 255, alpha ); };
 
-private:
-	uint8_t color_value[4]{};
+	std::array<uint8_t, 4> color_value = {};
 };

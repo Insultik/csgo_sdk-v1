@@ -19,8 +19,6 @@ namespace values {
     inline constexpr auto teleport_dist = 4096.f;
 }
 
-
-
 #define DATA_MAP( datamap, func, type, name) \
 	__forceinline type& func() { \
 		static const auto offset = datamap->find(name); \
@@ -233,13 +231,10 @@ public:
     OFFSET( bool, is_burst_mode, 0x3358 );
 
     c_cs_weapon_data* get_cs_weapon_data( ) {
-        using o_fn = c_cs_weapon_data * ( __thiscall* )( void* );
-        return utils::call_vfunc< o_fn >( this, 461 )( this );
-
-       /* if ( !this )
+       if ( !this )
             return nullptr;
 
-        return interfaces::weapon_system->get_cs_weapon_data( this->get_weapon_index( ) );*/
+        return interfaces::weapon_system->get_cs_weapon_data( this->get_weapon_index( ) );
     }
 
     std::wstring get_name( );
@@ -277,10 +272,6 @@ public:
 
     c_anim_state* get_anim_state( ) {
         return *reinterpret_cast< c_anim_state** >( reinterpret_cast< void* >( uintptr_t( this ) + 0x9960 ) );
-    }
-
-    anim_layer_t* get_animoverlays( ) {
-        return *( anim_layer_t** ) ( ( DWORD ) this + 0x2990 );
     }
 
     NETVAR_PTR( c_base_handle, get_weapons, "DT_BaseCombatCharacter->m_hMyWeapons" );
