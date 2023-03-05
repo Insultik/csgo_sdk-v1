@@ -1,5 +1,5 @@
 #pragma once
-#include "../../main.h"
+#include "../../main.hpp"
 #include "classes/includes.h"
 #include <d3d9.h>
 

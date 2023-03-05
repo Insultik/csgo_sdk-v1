@@ -1,4 +1,4 @@
-#include "ctx.h"
+#include "ctx.hpp"
 
 bool c_local_player::can_shoot( ) {
 	if ( !m_local || !m_local->is_alive( ) )

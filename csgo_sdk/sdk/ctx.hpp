@@ -1,5 +1,6 @@
 #pragma once
-#include "game/structs.h"
+#include "game/structs.hpp"
+#include "../utils/render/render.hpp"
 
 enum e_player_side : int {
     side_left = 1,
@@ -24,7 +25,7 @@ public:
         m_invalid = m_jumped = m_animated = false;
 
         for ( int i = 0; i < 4; i++ )
-            memcpy( m_matrix[ side_server ], nullptr, sizeof( matrix_t ) * 256.f );
+            memcpy( m_matrix[ side_server ], 0, sizeof( matrix_t ) * 256.f );
 
         for ( int i = 0; i < 3; i++ )
             memcpy( m_layers[ i ], 0, sizeof( anim_layer_t ) * 13.f );
@@ -53,7 +54,8 @@ public:
         m_jumped = player->get_flags( ).has( fl_on_ground );
         m_animated = false;
 
-        memcpy( m_matrix[ side_server ], player->get_bone_cache( ).base( ), sizeof( matrix_t ) * 256.f );
+        for ( int i = 0; i < 4; i++ )
+            memcpy( m_matrix[ i ], player->get_bone_cache( ).base( ), sizeof( matrix_t ) * 256.f );
 
         for ( int i = 0; i < 3; i++ )
             memcpy( m_layers[ i ], player->get_animoverlays( ), sizeof( anim_layer_t ) * 13.f );

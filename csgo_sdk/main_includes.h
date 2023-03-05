@@ -1,9 +1,0 @@
-#pragma once
-#include "sdk/ctx.h"
-#include "main.h"
-#include "sdk/math/math.h"
-#include "utils/ct_hash.h"
-#include <deque>
-#include "sdk/other/color/color.h"
-#include "utils/render/render.h"
-#include "cheat/features/features.h"

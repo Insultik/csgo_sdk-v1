@@ -1,4 +1,4 @@
-#include "../hooks.h"
+#include "../hooks.hpp"
 
 void __cdecl hooks::net_channel::process_packet::fn( void* packet, bool header ) {
 	if ( !interfaces::engine->get_net_channel( ) )

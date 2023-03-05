@@ -1,7 +1,7 @@
 #pragma once
-#include "../../../utils/utils.h"
-#include "../../math/vectors.h"
-#include "../../other/bfread/bfread.h"
+#include "../../../utils/utils.hpp"
+#include "../../math/vectors.hpp"
+#include "../../other/bfread/bfread.hpp"
 
 struct player_info_t {
 	int64_t			pad0;

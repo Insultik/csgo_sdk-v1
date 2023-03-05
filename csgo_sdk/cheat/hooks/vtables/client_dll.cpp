@@ -1,5 +1,5 @@
-#include "../hooks.h"
-#include "../../../main.h"
+#include "../hooks.hpp"
+#include "../../../main.hpp"
 
 __declspec( naked ) void __fastcall hooks::clientdll::create_move::fn( void* ecx, void* edx, int sequence_number, float sample_frametime, bool active ) {
 	__asm {

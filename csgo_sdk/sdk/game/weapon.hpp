@@ -1,8 +1,8 @@
 #pragma once
 #include "../interfaces/classes/i_client_entity.h"
-#include "../../utils/utils.h"
-#include "../../utils/netvars/netvar_manager.h"
-#include "enums.h"
+#include "../../utils/utils.hpp"
+#include "../../utils/netvars/netvar_manager.hpp"
+#include "enums.hpp"
 
 class c_cs_weapon_data {
 public:

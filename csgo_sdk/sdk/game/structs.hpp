@@ -1,15 +1,15 @@
 #pragma once
 #include "../interfaces/classes/i_client_entity.h"
-#include "../../utils/utils.h"
-#include "../../utils/netvars/netvar_manager.h"
-#include "enums.h"
-#include "weapon.h"
-#include "animstate.h"
+#include "../../utils/utils.hpp"
+#include "../../utils/netvars/netvar_manager.hpp"
+#include "enums.hpp"
+#include "weapon.hpp"
+#include "animstate.hpp"
 
 namespace values {
-    inline constexpr auto max_game_players = 65;
-    inline constexpr auto max_sim_ticks = 32;
-    inline constexpr auto mp_backup = 150u;
+    inline constexpr int max_game_players = 65;
+    inline constexpr int max_sim_ticks = 32;
+    inline constexpr int mp_backup = 150u;
                           
     inline constexpr auto max_bones = 256u;
     inline constexpr auto max_layers = 13u;

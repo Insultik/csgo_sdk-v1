@@ -1,5 +1,5 @@
-#include "utils.h"
-#include "../sdk/interfaces/interfaces.h"
+#include "utils.hpp"
+#include "../sdk/interfaces/interfaces.hpp"
 
 float ticks_to_time( int ticks ) {
 	return ( float ) ( ticks * interfaces::global_vars->m_interval_per_tick );

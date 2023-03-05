@@ -1,4 +1,4 @@
-#include "../hooks.h"
+#include "../hooks.hpp"
 
 void __fastcall hooks::base_player::build_transformations::fn( void* ecx, void* edx, int a2, int a3, int a4, int a5, int a6, int a7 ) {
 	auto pl = ( c_cs_player* ) ecx;

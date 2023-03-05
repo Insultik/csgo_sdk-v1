@@ -1,6 +1,6 @@
 #pragma once
-#include "../../../main_includes.h"
-#include "bounding_box.h"
+#include "../../../main_includes.hpp"
+#include "bounding_box.hpp"
 
 namespace players {
 	class player_esp_data_t {

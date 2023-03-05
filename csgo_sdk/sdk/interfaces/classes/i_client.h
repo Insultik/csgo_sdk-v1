@@ -1,7 +1,7 @@
 #pragma once
 #include <cstdint>
-#include "../../math/vectors.h"
-#include "../../other/recv.h"
+#include "../../math/vectors.hpp"
+#include "../../other/recv.hpp"
 
 class i_global_vars_base;
 

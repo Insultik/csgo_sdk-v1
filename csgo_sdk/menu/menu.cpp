@@ -1,4 +1,4 @@
-#include "menu.h"
+#include "menu.hpp"
 
 bool menu::instance( ) noexcept {
 	auto& io { ImGui::GetIO( ) };

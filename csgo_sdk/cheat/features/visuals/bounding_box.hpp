@@ -1,6 +1,6 @@
 #pragma once
-#include "../../../main_includes.h"
-#include "../../../utils/render/render.h"
+#include "../../../main_includes.hpp"
+#include "../../../utils/render/render.hpp"
 
 class c_bounding_box {
 public:

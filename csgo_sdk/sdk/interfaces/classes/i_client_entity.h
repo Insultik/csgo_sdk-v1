@@ -1,8 +1,8 @@
 #pragma once
 #include "i_client.h"
 #include "i_model_render.h"
-#include "../../other/bfread/bfread.h"
-#include "../../other/handle/i_handle_entity.h"
+#include "../../other/bfread/bfread.hpp"
+#include "../../other/handle/i_handle_entity.hpp"
 
 class matrix_t;
 class ang_t;

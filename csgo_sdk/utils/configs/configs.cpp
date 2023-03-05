@@ -1,13 +1,13 @@
 //#define KEY_BACKENDS 
 #define _(txt) txt
-#include "configs.h"
+#include "configs.hpp"
 #define FOLDER _("configs")
 
-//#include "imgui.h"
+//#include "imgui.hpp"
 #include  "../../dependencies/json/json.hpp"
 #include <filesystem>
 #include <fstream>
-#include "../../main_includes.h"
+#include "../../main_includes.hpp"
 
 using namespace nlohmann;
 

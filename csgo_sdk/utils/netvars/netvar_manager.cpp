@@ -1,4 +1,4 @@
-#include "netvar_manager.h"
+#include "netvar_manager.hpp"
 #include <ostream>
 
 namespace net_vars {

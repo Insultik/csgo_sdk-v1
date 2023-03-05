@@ -1,6 +1,6 @@
-#include "structs.h"
-#include "../ctx.h"
-#include "../math/math.h"
+#include "structs.hpp"
+#include "../ctx.hpp"
+#include "../math/math.hpp"
 
 bool c_cs_player::is_valid( e_valid_state state ) {
     if ( !this )

@@ -1,4 +1,4 @@
-#include "local_animations.h"
+#include "local_animations.hpp"
 
 void local_animations::update_player_animations( ) {
 

@@ -1,4 +1,4 @@
-#include "bounding_box.h"
+#include "bounding_box.hpp"
 
 bool c_bounding_box::calc_box( c_base_entity* entity ) {
 	if ( !entity )

@@ -5,8 +5,8 @@
 #include <format>
 #include <fstream>
 
-#include "utils/netvars/netvar_manager.h"
-#include "sdk/interfaces/interfaces.h"
+#include "utils/netvars/netvar_manager.hpp"
+#include "sdk/interfaces/interfaces.hpp"
 
 namespace console {
 	inline FILE* stream;

@@ -1,6 +1,6 @@
-#include "vectors.h"
+#include "vectors.hpp"
 #include <algorithm>
-#include "matrix.h"
+#include "matrix.hpp"
 
 vec3_t vec3_t::transform( const matrix_t& in ) const {
 	return vec3_t( dot_product( vec3_t( in[ 0 ][ 0 ], in[ 0 ][ 1 ], in[ 0 ][2 ] ) ) + in[ 0 ][ 4 ], dot_product( vec3_t( in[ 1 ][ 0 ], in[ 1 ][ 1 ], in[ 1 ][ 2 ] ) ) + in[ 1 ][ 4 ], dot_product( vec3_t( in[ 2 ][ 0 ], in[ 2 ][ 1 ], in[ 2 ][ 2 ] ) ) + in[ 2 ][ 4 ] );

@@ -1,7 +1,7 @@
 #pragma once
-#include "../../math/vectors.h"
-#include "../../../utils/utils.h"
-#include "../../other/cmd.h"
+#include "../../math/vectors.hpp"
+#include "../../../utils/utils.hpp"
+#include "../../other/cmd.hpp"
 
 class i_input {
 public:

@@ -1,5 +1,5 @@
 #pragma once
-#include "../../main.h"
+#include "../../main.hpp"
 #include <vector>
 #include <unordered_map>
 
@@ -107,7 +107,7 @@ struct data_map_t;
 struct input_data_t;
 
 using input_fn_t = void( __cdecl* )( input_data_t& );
-#include "../../utils/utils.h"
+#include "../../utils/utils.hpp"
 struct type_description_t {
 	e_field_type			m_field_type;
 	const char* m_field_name;

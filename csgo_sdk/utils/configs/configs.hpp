@@ -7,7 +7,7 @@
 #include <typeinfo>
 #include <string>
 
-#include "../ct_hash.h"
+#include "../ct_hash.hpp"
 
 #define ADD_VAR( type, name, value ) c_var<type> name = g_configs.add< type >(#name, value)
 

@@ -1,7 +1,7 @@
 #pragma once
-#include "../../../utils/utils.h"
-#include "../../math/vectors.h"
-#include "../../other/key-values/key_values.h"
+#include "../../../utils/utils.hpp"
+#include "../../math/vectors.hpp"
+#include "../../other/key-values/key_values.hpp"
 
 #define declare_pointer_handle(name) struct name##__ { int unused; }; typedef struct name##__ *name
 #define maxstudioskins		32

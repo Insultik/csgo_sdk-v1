@@ -1,12 +1,12 @@
 #pragma once
 #include <mutex>
-#include "../../main_includes.h"
+#include "../../main_includes.hpp"
 #include "../../dependencies/imgui/imgui.h"
 #include "../../dependencies/imgui/imgui_internal.h"
 #include "../../dependencies/imgui/imgui_impl_win32.h"
 #include "../../dependencies/imgui/imgui_impl_dx9.h"
-#include "../../sdk/other/color/color.h"
-#include "fonts.h"
+#include "../../sdk/other/color/color.hpp"
+#include "fonts.hpp"
 #pragma comment(lib, "freetype.lib")
 
 enum font_flags : int {

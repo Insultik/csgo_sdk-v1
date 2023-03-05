@@ -1,5 +1,5 @@
-﻿#include "main.h"
-#include "cheat/hooks/hooks.h"
+﻿#include "main.hpp"
+#include "cheat/hooks/hooks.hpp"
 
 unsigned long __stdcall main::on_attach( LPVOID module ) {
 	try {

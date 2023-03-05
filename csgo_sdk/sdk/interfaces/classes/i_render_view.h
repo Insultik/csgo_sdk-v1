@@ -1,6 +1,6 @@
 #pragma once
-#include "../../math/vectors.h"
-#include "../../../utils/utils.h"
+#include "../../math/vectors.hpp"
+#include "../../../utils/utils.hpp"
 
 class i_render_view {
 public:

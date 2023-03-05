@@ -6,7 +6,7 @@
 #include <cstddef>
 #include <memory>
 #include <vector>
-#include "../sdk/other/utl/utl.h"
+#include "../sdk/other/utl/utl.hpp"
 
 #define VFUNC(func, index, type, ...) __forceinline auto func { return utils::call_vfunc<type>(this, index)(this, __VA_ARGS__); };
 #define VFUNC_SIG(func, module_name, sig, type, ...) __forceinline auto func { static const auto fn = (type)utils::find_sig(module_name, sig); return fn(this, __VA_ARGS__); };

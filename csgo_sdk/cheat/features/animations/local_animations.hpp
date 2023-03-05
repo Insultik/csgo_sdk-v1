@@ -1,5 +1,5 @@
 #pragma once
-#include "../../../main_includes.h"
+#include "../../../main_includes.hpp"
 
 namespace local_animations {
 	void update_player_animations( );

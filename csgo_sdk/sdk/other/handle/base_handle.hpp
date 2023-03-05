@@ -1,5 +1,5 @@
 #pragma once
-#include "i_handle_entity.h"
+#include "i_handle_entity.hpp"
 #define NUM_ENT_ENTRY_BITS         (11 + 2)
 #define NUM_ENT_ENTRIES            (1 << NUM_ENT_ENTRY_BITS)
 #define INVALID_EHANDLE_INDEX 0xffffffff

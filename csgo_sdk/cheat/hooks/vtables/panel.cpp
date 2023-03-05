@@ -1,4 +1,4 @@
-#include "../hooks.h"
+#include "../hooks.hpp"
 
 void __fastcall hooks::panel::paint_traverse::fn( i_panel* vpanel, void* edx, vgui::vpanel panel_id, bool force_repaint, bool allow_force ) {
 	get_original( vpanel, edx, panel_id, force_repaint, allow_force );

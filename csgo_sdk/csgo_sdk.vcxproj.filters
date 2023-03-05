@@ -153,49 +153,49 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="main.h">
+    <ClInclude Include="main.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="sdk\interfaces\interfaces.h">
+    <ClInclude Include="sdk\interfaces\interfaces.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="sdk\interfaces\classes\includes.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="utils\utils.h">
+    <ClInclude Include="utils\utils.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="sdk\other\cmd.h">
+    <ClInclude Include="sdk\other\cmd.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="sdk\other\move_data.h">
+    <ClInclude Include="sdk\other\move_data.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="sdk\other\recv.h">
+    <ClInclude Include="sdk\other\recv.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="sdk\other\utl\utl.h">
+    <ClInclude Include="sdk\other\utl\utl.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="sdk\math\math.h">
+    <ClInclude Include="sdk\math\math.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="sdk\math\vectors.h">
+    <ClInclude Include="sdk\math\vectors.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="sdk\math\matrix.h">
+    <ClInclude Include="sdk\math\matrix.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="sdk\other\handle\base_handle.h">
+    <ClInclude Include="sdk\other\handle\base_handle.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="sdk\other\handle\i_handle_entity.h">
+    <ClInclude Include="sdk\other\handle\i_handle_entity.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="sdk\other\color\color.h">
+    <ClInclude Include="sdk\other\color\color.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="sdk\other\bfread\bfread.h">
+    <ClInclude Include="sdk\other\bfread\bfread.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="sdk\interfaces\classes\i_client.h">
@@ -225,19 +225,19 @@
     <ClInclude Include="sdk\interfaces\classes\i_prediction.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="sdk\other\key-values\key_values.h">
+    <ClInclude Include="sdk\other\key-values\key_values.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="sdk\game\enums.h">
+    <ClInclude Include="sdk\game\enums.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="sdk\game\structs.h">
+    <ClInclude Include="sdk\game\structs.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="utils\netvars\netvar_manager.h">
+    <ClInclude Include="utils\netvars\netvar_manager.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="cheat\hooks\hooks.h">
+    <ClInclude Include="cheat\hooks\hooks.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="dependencies\minhook\hde\hde32.h">
@@ -264,10 +264,10 @@
     <ClInclude Include="dependencies\minhook\trampoline.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="sdk\ctx.h">
+    <ClInclude Include="sdk\ctx.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="sdk\game\weapon.h">
+    <ClInclude Include="sdk\game\weapon.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="sdk\interfaces\classes\i_weapon_system.h">
@@ -276,37 +276,37 @@
     <ClInclude Include="sdk\interfaces\classes\i_engine.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="main_includes.h">
+    <ClInclude Include="main_includes.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="sdk\interfaces\classes\i_input.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="sdk\game\animstate.h">
+    <ClInclude Include="sdk\game\animstate.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="sdk\interfaces\classes\i_model_info.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="cheat\features\misc\movement.h">
+    <ClInclude Include="cheat\features\misc\movement.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="cheat\features\features.h">
+    <ClInclude Include="cheat\features\features.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="cheat\features\antiaim\antiaim.h">
+    <ClInclude Include="cheat\features\antiaim\antiaim.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="cheat\features\animations\local_animations.h">
+    <ClInclude Include="cheat\features\animations\local_animations.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="utils\render\render.h">
+    <ClInclude Include="utils\render\render.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="cheat\features\animations\lagcomp.h">
+    <ClInclude Include="cheat\features\animations\lagcomp.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="cheat\features\animations\animations.h">
+    <ClInclude Include="cheat\features\animations\animations.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="dependencies\json\detail\conversions\from_json.hpp">
@@ -405,7 +405,7 @@
     <ClInclude Include="dependencies\json\json_fwd.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="utils\configs\configs.h">
+    <ClInclude Include="utils\configs\configs.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="sdk\interfaces\classes\i_game_movement.h">
@@ -420,13 +420,13 @@
     <ClInclude Include="sdk\interfaces\classes\i_memory_alloc.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="cheat\features\events\events.h">
+    <ClInclude Include="cheat\features\events\events.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="utils\ct_hash.h">
+    <ClInclude Include="utils\ct_hash.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="cheat\features\listeners\listeners.h">
+    <ClInclude Include="cheat\features\listeners\listeners.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="dependencies\imgui\imconfig.h">
@@ -456,22 +456,22 @@
     <ClInclude Include="dependencies\imgui\imstb_truetype.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="menu\menu.h">
+    <ClInclude Include="menu\menu.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="sdk\interfaces\classes\i_debug_overlay.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="utils\render\fonts.h">
+    <ClInclude Include="utils\render\fonts.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="sdk\interfaces\classes\i_surface.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="cheat\features\visuals\bounding_box.h">
+    <ClInclude Include="cheat\features\visuals\bounding_box.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="cheat\features\visuals\players.h">
+    <ClInclude Include="cheat\features\visuals\players.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

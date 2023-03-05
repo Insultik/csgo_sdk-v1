@@ -1,4 +1,4 @@
-#include "events.h"
+#include "events.hpp"
 
 #define add_callback(name, fn) m_callbacks[HASH(name)] = fn; interfaces::event_manager->add_listener(&m_listener, _(name), false);
 

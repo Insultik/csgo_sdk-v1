@@ -1,4 +1,4 @@
-#include "interfaces.h"
+#include "interfaces.hpp"
 
 void* interfaces::get_interface( const HMODULE module, const char* interface_name ) {
     auto return_value = reinterpret_cast< create_interface_fn >( GetProcAddress( module, "CreateInterface" ) )( interface_name, nullptr );

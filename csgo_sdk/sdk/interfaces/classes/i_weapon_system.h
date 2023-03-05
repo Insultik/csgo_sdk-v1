@@ -1,5 +1,5 @@
 #pragma once
-#include "../../game/weapon.h"
+#include "../../game/weapon.hpp"
 
 class i_weapon_system {
 public:

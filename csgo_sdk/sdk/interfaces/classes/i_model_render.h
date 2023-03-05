@@ -1,6 +1,6 @@
 #pragma once
 #include "i_material.h"
-#include "../../math/vectors.h"
+#include "../../math/vectors.hpp"
 
 struct model_render_info_t;
 class matrix_t;

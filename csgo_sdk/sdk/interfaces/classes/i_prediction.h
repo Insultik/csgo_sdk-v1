@@ -1,7 +1,7 @@
 #pragma once
 #include "i_globals.h"
-#include "../../other/utl/utl.h"
-#include "../../../utils/utils.h"
+#include "../../other/utl/utl.hpp"
+#include "../../../utils/utils.hpp"
 
 class ang_t;
 class c_user_cmd;

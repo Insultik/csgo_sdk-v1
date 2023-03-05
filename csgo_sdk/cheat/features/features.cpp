@@ -1,4 +1,4 @@
-#include "features.h"
+#include "features.hpp"
 
 void features::draw_features( ) {
 	players::instance( );

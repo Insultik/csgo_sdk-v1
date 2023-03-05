@@ -1,6 +1,6 @@
 #pragma once
-#include "../../other/utl/utl.h"
-#include "../../other/handle/base_handle.h"
+#include "../../other/utl/utl.hpp"
+#include "../../other/handle/base_handle.hpp"
 
 class i_client_networkable;
 class i_client_entity;

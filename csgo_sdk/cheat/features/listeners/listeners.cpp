@@ -1,4 +1,4 @@
-#include "listeners.h"
+#include "listeners.hpp"
 
 bool is_grenade( const int& class_id ) {
 	switch ( class_id ) {

@@ -1,5 +1,5 @@
-#include "key_values.h"
-#include "../../../utils/utils.h"
+#include "key_values.hpp"
+#include "../../../utils/utils.hpp"
 
 c_key_values::c_key_values( const char* key_name, void* unk, void* unk2 ) {
 	static const auto init_address = utils::find_sig( "client.dll", "55 8B EC 56 8B F1 33 C0 8B 4D 0C 81" );

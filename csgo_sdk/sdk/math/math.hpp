@@ -1,7 +1,7 @@
 #pragma once
-#include "../../utils/utils.h"
-#include "vectors.h"
-#include "matrix.h"
+#include "../../utils/utils.hpp"
+#include "vectors.hpp"
+#include "matrix.hpp"
 #include <cmath>
 #include <algorithm>
 #include <DirectXMath.h>

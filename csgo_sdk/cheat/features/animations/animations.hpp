@@ -1,5 +1,5 @@
 #pragma once
-#include "lagcomp.h"
+#include "lagcomp.hpp"
 
 namespace anim_system {
 	void update_player( c_cs_player* player );

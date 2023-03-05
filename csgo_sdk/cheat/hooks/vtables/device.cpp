@@ -1,5 +1,5 @@
-#include "../hooks.h"
-#include "../../../menu/menu.h"
+#include "../hooks.hpp"
+#include "../../../menu/menu.hpp"
 
 void hooks::device::wnd_proc::instance( ) {
 	D3DDEVICE_CREATION_PARAMETERS parameters;

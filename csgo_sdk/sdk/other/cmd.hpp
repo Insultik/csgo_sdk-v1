@@ -1,7 +1,7 @@
 #pragma once
 #include <cstdint>
-#include "../math/vectors.h"
-#include "../../utils/utils.h"
+#include "../math/vectors.hpp"
+#include "../../utils/utils.hpp"
 
 class c_user_cmd {
 public:

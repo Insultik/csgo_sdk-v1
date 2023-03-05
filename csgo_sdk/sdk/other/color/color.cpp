@@ -1,4 +1,4 @@
-#include "color.h"
+#include "color.hpp"
 
 color_t::color_t( ) {
 	*reinterpret_cast<int*>(this) = 0;

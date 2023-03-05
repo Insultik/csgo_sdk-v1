@@ -1,5 +1,5 @@
-#include "hooks.h"
-#include "../../main.h"
+#include "hooks.hpp"
+#include "../../main.hpp"
 
 #define create_hook( hook_sig, hook ) \
     if ( MH_CreateHook( hook_sig, hook::fn, ( void** )&hook::get_original ) != MH_OK )  \

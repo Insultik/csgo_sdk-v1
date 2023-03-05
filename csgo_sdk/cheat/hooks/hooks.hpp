@@ -1,6 +1,6 @@
 #pragma once
 #include "../../dependencies/minhook/minhook.h"
-#include "../../main_includes.h"
+#include "../../main_includes.hpp"
 
 namespace hooks {
     bool instance( );

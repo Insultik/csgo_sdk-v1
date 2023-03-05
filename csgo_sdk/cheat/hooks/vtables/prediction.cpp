@@ -1,4 +1,4 @@
-#include "../hooks.h"
+#include "../hooks.hpp"
 
 bool __fastcall hooks::prediction::in_prediction::fn( i_prediction* ecx, void* edx ) {
 	/* skip setup bones call */

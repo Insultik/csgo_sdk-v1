@@ -1,7 +1,7 @@
 #pragma once
-#include "../../../utils/utils.h"
-#include "../../math/vectors.h"
-#include "../../math/matrix.h"
+#include "../../../utils/utils.hpp"
+#include "../../math/vectors.hpp"
+#include "../../math/matrix.hpp"
 #include "i_model_render.h"
 
 struct anim_tag_t {
