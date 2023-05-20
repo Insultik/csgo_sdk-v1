@@ -179,7 +179,6 @@
     <ClCompile Include="dependencies\imgui\imgui_impl_dx9.cpp" />
     <ClCompile Include="dependencies\imgui\imgui_impl_win32.cpp" />
     <ClCompile Include="dependencies\imgui\imgui_widgets.cpp" />
-    <ClCompile Include="cheat\features\eng_prediction\eng_prediction.cpp" />
     <ClCompile Include="menu\menu.cpp" />
     <ClCompile Include="utils\configs\configs.cpp" />
     <ClCompile Include="utils\render\render.cpp" />
@@ -254,7 +253,6 @@
     <ClInclude Include="dependencies\json\json_fwd.hpp" />
     <ClInclude Include="cheat\features\events\events.hpp" />
     <ClInclude Include="cheat\features\listeners\listeners.hpp" />
-    <ClInclude Include="cheat\features\eng_prediction\eng_prediction.hpp" />
     <ClInclude Include="menu\menu.hpp" />
     <ClInclude Include="sdk\interfaces\classes\i_debug_overlay.h" />
     <ClInclude Include="sdk\interfaces\classes\i_event_listener.h" />
